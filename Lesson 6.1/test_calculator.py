@@ -29,7 +29,7 @@ def test_calculator():
     driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/div/div[2]/span[15]').click()
 
 # Покажи результат
-    wait = WebDriverWait(driver, 45)
+    wait = WebDriverWait(driver, 48)
     wait.until(EC. text_to_be_present_in_element((By.CSS_SELECTOR, '[class = "screen"]'), '15'))
     result = driver.find_element(By.CSS_SELECTOR, '[class = "screen"]').text
 
