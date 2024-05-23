@@ -29,7 +29,7 @@ def test_input_fields():
     
     
  # Проверь подсветку полей
-    zip_code_color = driver.find_element(By.CSS_SELECTOR, '[name="zip-code"]').value_of_css_property('background_color')
+    zip_code_color = driver.find_element(By.ID, 'zip-code').value_of_css_property('background_color')
     assert zip_code_color == 'rgba(248, 215, 218, 1)'
     
     other_fields = ['#first_name', '#last_name', '#addres', '#city', '#country', '#e-mail', '#phone', '#job-position', '#company']
