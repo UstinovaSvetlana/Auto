@@ -16,11 +16,10 @@ class Calculator:
         delay_field.send_keys('2')
 
     def sum_nums(self):
-        self._driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/div/div[2]/span[1]').click()
-        self._driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/div/div[2]/span[4]').click()
-        self._driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/div/div[2]/span[2]').click()
-        self._driver.find_element(By.XPATH, '//html/body/main/div/div[4]/div/div/div[2]/span[15]').click()
-
+        self._driver.find_element(By.XPATH, '//span[contains(text(),"7")]').click()
+        self._driver.find_element(By.XPATH, '//span[contains(text(),"+")]').click()
+        self._driver.find_element(By.XPATH, '//span[contains(text(),"8")]').click()
+        self._driver.find_element(By.XPATH, '//span[contains(text(),"=")]').click()
     def result(self):
         wait = WebDriverWait(self._driver, 4)
         wait.until(EC. text_to_be_present_in_element((By.CSS_SELECTOR, '[class = "screen"]'), '15'))
